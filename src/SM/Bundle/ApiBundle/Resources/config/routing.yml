@@ -1,3 +1,0 @@
-sm_api_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: SMApiBundle:Default:index }

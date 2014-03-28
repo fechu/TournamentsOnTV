@@ -1,4 +1,3 @@
 sm_api:
     resource: "@SMApiBundle/Resources/config/routing.yml"
-    prefix:   /
 
