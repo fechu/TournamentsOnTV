@@ -1,0 +1,4 @@
+sm_api_controller:
+    type: rest
+    prefix: "/tournament"
+    resource: "@SMApiBundle/Controller/TournamentController.php"

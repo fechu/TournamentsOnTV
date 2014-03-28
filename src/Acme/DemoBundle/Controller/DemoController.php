@@ -21,9 +21,9 @@ class DemoController extends Controller
     {
         return array();
     }
-
+    
     /**
-     * @Route("/hello/{name}", name="_demo_hello")
+     * @Route("/myhello/{name}", name="_demo_hello")
      * @Template()
      */
     public function helloAction($name)
