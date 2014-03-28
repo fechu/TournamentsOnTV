@@ -1,0 +1,6 @@
+[WARNING] window.onPreShow is undefined
+[WARNING] window.onShow is undefined
+[WARNING] window.onFocusin is undefined
+window.onActivatenull
+[WARNING] window.onShow is undefined
+[WARNING] window.onFocusin is undefined
