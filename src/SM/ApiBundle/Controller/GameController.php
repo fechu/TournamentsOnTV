@@ -37,5 +37,5 @@ class GameController extends BaseRestController
     	
     	return $this->createResponse($game);
     }
-
+    
 }

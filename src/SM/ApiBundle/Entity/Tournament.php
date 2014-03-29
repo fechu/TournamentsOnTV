@@ -75,6 +75,14 @@ class Tournament
     }
     
     /**
+     * @Serializer\Exclude
+     */
+    public function getGames()
+    {
+    	return $this->games;
+    }
+    
+    /**
      * @Serializer\VirtualProperty
      * @return array 	An array with all id's of the games.
      */
