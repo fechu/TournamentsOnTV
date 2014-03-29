@@ -1,4 +1,9 @@
-sm_api_controller:
+sm_api_tournament:
     type: rest
     prefix: "/tournament"
     resource: "@SMApiBundle/Controller/TournamentController.php"
+
+sm_api_image:
+    type: annotation
+    prefix: "/image"
+    resource: "@SMApiBundle/Controller/ImageController.php"
