@@ -4,6 +4,7 @@ namespace SM\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Game
  *
@@ -46,6 +47,11 @@ class Game
      * @var Game
      */
     protected $rightGame;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Tournament", inversedBy="games")
+     */
+    protected $tournament;
     
 
     /**

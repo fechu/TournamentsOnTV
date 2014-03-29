@@ -3,6 +3,8 @@
 namespace SM\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\VirtualProperty;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Tournament
@@ -28,6 +30,16 @@ class Tournament
      */
     private $name;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Game", mappedBy="tournament")
+     */
+    private $games;
+    
+    public function __construct()
+    {
+    	$this->games = new ArrayCollection();
+    }
+    
     /**
      * Get id
      *
@@ -59,6 +71,14 @@ class Tournament
     public function getName()
     {
         return $this->name;
+    }
+    
+    /**
+     * @VirtualProperty
+     */
+    public function gameCount()
+    {
+    	return count($this->games);
     }
     
     
