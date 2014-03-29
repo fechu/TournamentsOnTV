@@ -8,7 +8,13 @@ sm_api_image_rest:
     type: rest
     prefix: "/image"
     resource: "@SMApiBundle/Controller/ImageController.php"
+
 sm_api_tournament:
     type: rest
     prefix: "/tournament"
     resource: "@SMApiBundle/Controller/TournamentController.php"
+
+sm_api_games:
+    type: rest
+    prefix: "/game"
+    resource: "@SMApiBundle/Controller/GameController.php"

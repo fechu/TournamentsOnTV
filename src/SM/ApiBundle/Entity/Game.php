@@ -3,6 +3,7 @@
 namespace SM\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
 
 
 /**
@@ -38,18 +39,21 @@ class Game
 
     /**
      * @ORM\OneToOne(targetEntity="Game")
+     * @Serializer\Exclude
      * @var Game
      */
     protected $leftGame;
     
     /**
      * @ORM\OneToOne(targetEntity="Game")
+     * @Serializer\Exclude
      * @var Game
      */
     protected $rightGame;
     
     /**
      * @ORM\ManyToOne(targetEntity="Tournament", inversedBy="games")
+     * @Serializer\Exclude
      */
     protected $tournament;
     
@@ -109,4 +113,31 @@ class Game
     {
         return $this->teamRight;
     }
+    
+    /**
+     * @Serializer\VirtualProperty
+     */
+    public function leftGameId()
+    {
+    	if ($this->leftGame) {
+            return $this->leftGame->getId();
+    	}
+    	else {
+    		return -1;
+    	}
+    }
+    
+    /**
+     * @Serializer\VirtualProperty
+     */
+    public function rightGameId()
+    {
+    	if ($this->rightGame) {
+			return $this->rightGame->getId();
+    	}
+    	else {
+    		return -1;
+    	}
+    }
+
 }
