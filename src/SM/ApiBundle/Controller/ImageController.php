@@ -11,7 +11,7 @@ use FOS\RestBundle\Controller\FOSRestController;
 /**
  * @Rest\NamePrefix("sm_api_image_")
  */
-class ImageController extends FOSRestController
+class ImageController extends BaseRestController
 {
 	/**
 	 * @Rest\Get("/")
@@ -20,6 +20,7 @@ class ImageController extends FOSRestController
 	{
     	$manager = $this->getDoctrine()->getManager();
     	$repo = $manager->getRepository("SM\ApiBundle\Entity\Image");
-		return array("images" => $repo->findAll());
+    	$data = array("images" => $repo->findAll());
+		return $this->createResponse($data);
 	}
 }

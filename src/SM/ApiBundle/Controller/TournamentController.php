@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 /**
  * @Rest\NamePrefix("sm_api_tournament_")
  */
-class TournamentController extends FOSRestController
+class TournamentController extends BaseRestController
 {
     /**
 	 * @Rest\Get("/")
@@ -26,16 +26,7 @@ class TournamentController extends FOSRestController
     	$tournaments = $repo->findAll();
     	$data = array("tournaments" => $tournaments);
     	
-    	if (isset($callback)) {
-    		$response = new JsonResponse();
-    		$response->setCallback($callback);
-    		$serializer = $this->container->get('jms_serializer');
-    		$serializedTournaments = $serializer->serialize($data, 'json');
-    		$response->setContent($callback . "(" . $serializedTournaments . ")");
-    		return $response;	
-    	}
-    	
-    	return $data;
+    	return $this->createResponse($data);
     }
 
 }
