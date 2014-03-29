@@ -7,12 +7,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
-use Doctrine\Bundle\DoctrineBundle\ManagerConfigurator;
-
+/**
+ * @Rest\NamePrefix("sm_api_tournament_")
+ */
 class TournamentController extends FOSRestController
 {
     /**
-	 * @Rest\Get("/")
+	 * @Rest\Get("/all")
      */
     public function allAction()
     {

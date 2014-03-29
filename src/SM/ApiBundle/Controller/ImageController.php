@@ -8,6 +8,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 
+/**
+ * @Rest\NamePrefix("sm_api_image_")
+ */
 class ImageController extends FOSRestController
 {
 	/**
