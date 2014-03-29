@@ -36,6 +36,11 @@ class Game
      * @ORM\Column(name="team_right", type="string", length=255)
      */
     private $teamRight;
+    
+    /**
+     * @ORM\Column(name="score", type="string", length=255)
+     */
+    private $score;
 
     /**
      * @ORM\OneToOne(targetEntity="Game")
