@@ -5,6 +5,7 @@ namespace SM\ApiBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation\VirtualProperty;
 
 /**
  * Image
@@ -86,7 +87,9 @@ class Image
     	? null
     	: $this->getUploadRootDir().'/'.$this->path;
     }
-    
+    /**
+     * @VirtualProperty
+     */
     public function getWebPath()
     {
     	return null === $this->path
