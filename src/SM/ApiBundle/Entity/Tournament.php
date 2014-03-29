@@ -76,11 +76,17 @@ class Tournament
     
     /**
      * @Serializer\VirtualProperty
+     * @return array 	An array with all id's of the games.
      */
-    public function gameCount()
-    {
-    	return count($this->games);
+    public function gameIds() {
+    	$ids = array();
+    	
+    	foreach ($this->games as $game) {
+    		$ids[] = $game->getId();
+    	}
+    	
+    	return $ids;
+    	
     }
-    
     
 }
