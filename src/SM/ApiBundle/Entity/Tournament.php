@@ -3,9 +3,9 @@
 namespace SM\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use JMS\Serializer\Annotation\VirtualProperty;
 use Doctrine\Common\Collections\ArrayCollection;
 
+use JMS\Serializer\Annotation as Serializer;
 /**
  * Tournament
  *
@@ -32,6 +32,7 @@ class Tournament
 
     /**
      * @ORM\OneToMany(targetEntity="Game", mappedBy="tournament")
+     * @Serializer\Exclude
      */
     private $games;
     
@@ -74,7 +75,7 @@ class Tournament
     }
     
     /**
-     * @VirtualProperty
+     * @Serializer\VirtualProperty
      */
     public function gameCount()
     {

@@ -13,7 +13,7 @@ use FOS\RestBundle\Controller\FOSRestController;
 class TournamentController extends FOSRestController
 {
     /**
-	 * @Rest\Get("/all")
+	 * @Rest\Get("/")
      */
     public function allAction()
     {
