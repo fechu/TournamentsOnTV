@@ -3,7 +3,12 @@ sm_api_tournament:
     prefix: "/tournament"
     resource: "@SMApiBundle/Controller/TournamentController.php"
 
-sm_api_image:
+sm_api_image_upload:
     type: annotation
     prefix: "/image"
     resource: "@SMApiBundle/Controller/UploadController.php"
+
+sm_api_image:
+    type: rest
+    prefix: "/image"
+    resource: "@SMApiBundle/Controller/ImageController.php"

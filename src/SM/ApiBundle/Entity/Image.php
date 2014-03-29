@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table()
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="SM\ApiBundle\Entity\Repository\ImageRepository")
  */
 class Image
 {
