@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Nelmio\ApiDocBundle\NelmioApiDocBundle;
 
 class AppKernel extends Kernel
 {
@@ -18,6 +19,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
         	new FOS\RestBundle\FOSRestBundle(),
         	new JMS\SerializerBundle\JMSSerializerBundle(),
+        	new NelmioApiDocBundle(),
             new SM\ApiBundle\SMApiBundle(),
         );
 

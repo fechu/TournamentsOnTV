@@ -1,5 +1,9 @@
 sm_api:
     resource: "@SMApiBundle/Resources/config/routing.yml"
     prefix:   /api/v1/
+    
+NelmioApiDocBundle:
+    resource : "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix: /api/v1/doc
 
 

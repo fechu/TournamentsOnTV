@@ -9,10 +9,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use SM\ApiBundle\Entity\Image;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 class UploadController extends Controller
 {
 	/**
+	 * Upload images
+	 * 
+	 * Use a field called "file" in a form-data body to upload an image
+	 * 
+	 * @ApiDoc(section="Image")
 	 * @Route("/")
 	 * @Method({"POST"})
 	 * @return multitype:\Symfony\Component\Form\FormView

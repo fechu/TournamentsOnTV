@@ -5,6 +5,7 @@ namespace SM\ApiBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\Response;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 /**
  * @Rest\NamePrefix("sm_api_game_")
@@ -12,7 +13,14 @@ use Symfony\Component\HttpFoundation\Response;
 class GameController extends BaseRestController
 {
 	/**
-	 * @Rest\Get("/{id}/")
+	 * Get a game with a given id.
+	 * 
+	 * @ApiDoc(
+	 * 		section="Game",
+	 * 		output="SM\ApiBundle\Entity\Game"
+	 * )
+	 * @Rest\Get("/{id}/", requirements={"id" = "\d+"} )
+	 * 
 	 */
     public function getAction($id)
     {
