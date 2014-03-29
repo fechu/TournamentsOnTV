@@ -6,4 +6,4 @@ sm_api_tournament:
 sm_api_image:
     type: annotation
     prefix: "/image"
-    resource: "@SMApiBundle/Controller/ImageController.php"
+    resource: "@SMApiBundle/Controller/UploadController.php"

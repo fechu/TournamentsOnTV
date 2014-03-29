@@ -10,7 +10,7 @@ use SM\ApiBundle\Entity\Image;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class ImageController extends Controller
+class UploadController extends Controller
 {
 	/**
 	 * @Route("/")
