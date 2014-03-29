@@ -74,9 +74,6 @@ class Tournament
         return $this->name;
     }
     
-    /**
-     * @Serializer\Exclude
-     */
     public function getGames()
     {
     	return $this->games;

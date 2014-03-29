@@ -39,6 +39,10 @@ class TournamentController extends BaseRestController
     }
     
     /**
+     * @ApiDoc(
+     * 	section="Tournament",
+     *  output="SM\ApiBundle\Entity\Tournament"
+     * )
      * @Rest\Get("/{tournament_id}/games/")
      */
     public function gamesAction($tournament_id) 
