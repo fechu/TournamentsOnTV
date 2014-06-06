@@ -2,7 +2,7 @@
 
 This application was developed by [Roman Brunner (jogli5er)](https://github.com/jogli5er) and [Sandro Meier (fechu)](https://github.com/fechu).
 
-It is a prove of concept for a Samsung Smart TV application. This project was created during the [Swiss Smart TV Hackathon 2014](http://www.samsung-hackathon.ch) and won the 2. prize.
+It is a proof of concept for a Samsung Smart TV application. This project was created during the [Swiss Smart TV Hackathon 2014](http://www.samsung-hackathon.ch) and won the 2. prize.
 
 Feel free to use the source as an inspiration or basis for your own Smart TV project.
 
